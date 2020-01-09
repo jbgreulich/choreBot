@@ -15,6 +15,7 @@ let openDoor2;
 let openDoor3;
 
 let startButton = document.getElementById('start');
+let resultDisplay = document.getElementById('result');
 
 let score = 0;
 let highScore = 0;
@@ -107,8 +108,9 @@ door3.onclick = () => {
 
 startButton.onclick = () => {
   if (!currentlyPlaying) {
-  	startRound();
+    startRound();
   }
+  toggleButton();
 }
 
 let startRound = () => {
@@ -116,20 +118,30 @@ let startRound = () => {
   door2.src = closedDoorPath;
   door3.src = closedDoorPath;
   numClosedDoors = 3;
-  startButton.innerHTML = 'Good luck!';
 	currentlyPlaying = true;
   randomChoreDoorGenerator();
 }
 
+const toggleButton = () => {
+  let x = document.getElementById('start');
+  if (x.style.visibility === 'hidden') {
+    x.style.visibility = 'visible';
+  }else {
+    x.style.visibility = 'hidden';
+    resultDisplay.innerHTML = '&nbsp;';
+  }
+}
+
 const gameOver = (status) => {
   if (status === 'win') {
-    startButton.innerHTML = 'You win! Play again?';
+    resultDisplay.innerHTML = 'You win! Play again?';
     getYourScore();
   } else {
-    startButton.innerHTML = 'Game over! Play again?';
+    resultDisplay.innerHTML = 'Game over! Play again?';
     score = 0;
     currentStreak.innerHTML = score;
   }
+  toggleButton();
   currentlyPlaying = false;
 }
 
