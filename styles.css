@@ -1,0 +1,110 @@
+body {
+  background-color: #010165;
+  color: #00ffff;
+  font-family: Work Sans, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 10px;
+}
+
+.header {
+  grid-column: 1/13;
+  border-bottom: 2px solid #00ffff;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.75rem;
+}
+.header img {
+  height: 40px;
+  text-align: center;
+}
+
+.title {
+  grid-column: 6/8;
+  display: grid;
+  font-size: 1.5rem;
+}
+.title img {
+  grid-row: 1;
+  margin: auto;
+  height: 20px;
+}
+.title p {
+  grid-row: 1;
+}
+
+.instructions {
+  grid-column: 4/10;
+  margin-bottom: 1.5rem;
+}
+.instructions li {
+  margin-bottom: 1.25rem;
+}
+
+.doors {
+  grid-column: 1/13;
+  text-align: center;
+}
+
+.door-frame {
+  cursor: pointer;
+  margin: 0 1%;
+}
+
+.result-display {
+  grid-column: 5/9;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #eb6536;
+}
+
+.start-button {
+  grid-column: 6/8;
+  padding: 2%;
+  background-color: #00ffff;
+  color: #010165;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.score-row {
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 20px;
+  text-align: center;
+}
+
+.current-streak {
+  display: grid;
+  grid-column: 4;
+  grid-template: 1fr 1fr/1fr;
+}
+
+.best-streak {
+  display: grid;
+  grid-column: 5;
+  grid-template: 1fr 1fr/1fr;
+}
+
+.score-text {
+  grid-row: 1;
+  color: #00ffff;
+}
+
+.score-box {
+  grid-row: 2;
+  background-color: #00ffff;
+  color: #010165;
+  margin: auto;
+  font-size: 2rem;
+  padding: 8px;
+  width: 60px;
+}
+
+/*# sourceMappingURL=styles.css.map */
