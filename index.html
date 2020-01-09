@@ -1,72 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chore Door!</title>
-    <link href="resources/style.css" rel="stylesheet" type="text/css">
+    <title>Chore Bot!</title>
+    <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
   </head>
 
   <body>
-    <div class='header'>
-      <img src='resources/logo.svg'>
+    <div class='container'>
+      <div class='header'>
+        CHORE BOT
+        <img src='resources/broom.svg'>
+        <!--Icons made by https://www.flaticon.com/authors/freepik Freepik-->
+      </div>
+
+      <div class='title'>
+        <img src='resources/star.svg'>
+        <p>Instructions</p>
+      </div>
+
+      <div class='instructions'>
+        <ol>
+          <li>Hiding behind one of these doors is the ChoreBot.</li>
+          <li>Your mission is to open all of the doors without running into the ChoreBot.</li>
+          <li>If you manage to avoid the ChoreBot until you open the very last door, you win!</li>
+          <li>See if you can score a winning streak!</li>
+        </ol>
+      </div>
+
+      <div class='doors'>
+        <img id='door1' class='door-frame' src='resources/closed_door.svg'>
+        <img id='door2' class='door-frame' src='resources/closed_door.svg'>
+        <img id='door3' class='door-frame' src='resources/closed_door.svg'>
+      </div>
+
+      <div id='result' class='result-display'>&nbsp;</div>
+
+      <button id='start' class='start-button' style='visibility: hidden'>Play Again!</button>
+
+      <div class='score-row'>
+        <div class='current-streak'>
+          <p class='score-text'>Current Streak:</p>
+          <div id='score-number' class='score-box'></div>
+        </div>
+        <div class='best-streak'>
+          <p class='score-text'>Best Streak:</p>
+          <div id='high-score-number' class='score-box'></div>
+        </div>
+      </div> 
     </div>
-
-    <div class='title-row'>
-      <img src='resources/star.svg'>
-      <p class='instructions-title'>Instructions</p>
-      <img src='resources/star.svg'>
-    </div>
-
-    <table class='instructions-row'>
-      <tr>
-        <td class='instructions-number'>1</td>
-        <td class='instructions-text'>
-          Hiding behind one of these doors is the ChoreBot.
-        </td>
-      </tr>
-      <tr>
-        <td class='instructions-number'>2</td>
-        <td class='instructions-text'>
-          Your mission is to open all of the doors without running into the ChoreBot.
-        </td>
-      </tr>
-      <tr>
-        <td class='instructions-number'>3</td>
-        <td class='instructions-text'>
-          If you manage to avoid the ChoreBot until you open the very last door, you win!
-        </td>
-      </tr>
-      <tr>
-        <td class='instructions-number'>4</td>
-        <td class='instructions-text'>
-          See if you can score a winning streak!
-        </td>
-      </tr>
-    </table>
-
-	  <div class='door-row'>
-      <img id='door1' class='door-frame' src='resources/closed_door.svg'>
-      <img id='door2' class='door-frame' src='resources/closed_door.svg'>
-      <img id='door3' class='door-frame' src='resources/closed_door.svg'>
-    </div>
-
-    <div id='start' class='start-row'>
-      Good luck!
-    </div>
-
-    <table class="score-row">
-    	<tr>
-      	<th class="score-text">Current streak:</th>
-      	<th class="score-text">Best streak:</th>
-    	</tr>
-    	<tr>
-      	<th class="score-box" id="score-number"></th>
-      	<th class="score-box" id="high-score-number">	</th>
-    	</tr>
-  	</table>
 
     <script type='text/javascript' src='script.js'>
     </script>
-
   </body>
 </html>
